@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pathdinfing", "pathdinfing\pathdinfing.vcxproj", "{D38F6DEF-4108-4C65-841D-3A65BA9945EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Debug|x64.ActiveCfg = Debug|x64
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Debug|x64.Build.0 = Debug|x64
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Debug|x86.ActiveCfg = Debug|Win32
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Debug|x86.Build.0 = Debug|Win32
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Release|x64.ActiveCfg = Release|x64
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Release|x64.Build.0 = Release|x64
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Release|x86.ActiveCfg = Release|Win32
+		{D38F6DEF-4108-4C65-841D-3A65BA9945EE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02BB53EE-C05B-42A1-80A8-40F9ACECDADE}
+	EndGlobalSection
+EndGlobal
