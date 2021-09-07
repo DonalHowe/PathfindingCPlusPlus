@@ -3,15 +3,14 @@
 void Grid::setupGrid()
 {
     m_cell.setupCell();
-    findNeighbours(STARTID);
-   
+   // findNeighbours(STARTID);
+ 
     sf::Vector2f newPos{ 0,0 };
     for (int i = 0; i < 155; i++)
     {
 
         m_cell.setID();
 
-      
         m_grid.push_back(m_cell);
 
         newPos.x += m_grid.at(i).m_width;
@@ -25,13 +24,16 @@ void Grid::setupGrid()
             int i = 0;
         }
        
-     
         m_grid.at(i).m_rect.setPosition( newPos);
     }
-    m_grid.at(STARTID).m_rect.setFillColor(sf::Color::Blue);
- /*   int calcRow = m_grid.at(m_grid.size() - 1) / 10;
-    int calcCol = m_grid.at(m_grid.size() - 1) % 10;*/
+  
+
     m_grid.size();
+    for (int i = 0; i < 155; i++)
+    {
+        findNeighbours(m_grid,i );
+    }
+   
     int i = 0;
 }
 
@@ -50,13 +52,12 @@ Grid::Grid()
 
 
 
- int Grid::findNeighbours(int t_ID)
+ int Grid::findNeighbours(std::vector<Cell> &t_grid, int t_ID)
 {
 	
-	// Let's see if we can find the neighbours of row 4 and column 4:
-	int row = t_ID; // the array in grid array
-    int col = t_ID; // this is the object in the secons array inside of grid array
 	
+     int row = t_ID/ 12;
+     int col = t_ID % 12;
 	
 	// List all neighbors:
 	for (int direction = 0; direction < 9; direction++) {
@@ -70,12 +71,14 @@ Grid::Grid()
 
 			// A valid neighbor:
 			std::cout << "Neighbor: " << n_row << "," << n_col << ": "  << std::endl;
+            t_grid.at(t_ID).addNeighbour(n_row+(n_col*12));
 		//	m_tempList.push_back(std::make_pair(n_row, n_col));
+
 		}
 		
 	}
 	
-	
+  
 	return 10;
 
 }

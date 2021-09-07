@@ -19,3 +19,8 @@ void Cell::setID()
     id += 1;
 }
 
+void Cell::addNeighbour(int t_ID)
+{
+    neighboursIDS.push_back(t_ID);
+}
+

@@ -12,15 +12,15 @@ class Grid
 	
 public:
 	Grid();
-	const static int STARTID = 5;
+	//const static int STARTID = 5;
 	
 	void setupGrid();
 	void render(sf::RenderWindow& t_window);
 	const static int   m_MAX_ROWS = 12;
 	const static int M_MAX_COLUMNS = 12;
 	
-	int findNeighbours(int t_ID);
-
+	int findNeighbours(std::vector<Cell> &t_grid, int t_ID);
+	
 	
 };
 

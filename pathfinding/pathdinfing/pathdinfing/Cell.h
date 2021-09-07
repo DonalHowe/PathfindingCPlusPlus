@@ -14,6 +14,7 @@ public:
 	const static int m_width = 50;
 	const static int m_height = 50;
 	int id = 0;
-	
+	std::vector<int > neighboursIDS;
+	void addNeighbour(int t_ID);
 };
 
