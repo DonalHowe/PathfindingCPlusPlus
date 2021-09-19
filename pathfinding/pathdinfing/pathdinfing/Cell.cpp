@@ -24,3 +24,15 @@ void Cell::addNeighbour(int t_ID)
     neighboursIDS.push_back(t_ID);
 }
 
+void Cell::setVisited()
+{
+    m_visited = true;
+}
+
+bool Cell::getVisited()
+{
+
+    return m_visited;
+
+}
+

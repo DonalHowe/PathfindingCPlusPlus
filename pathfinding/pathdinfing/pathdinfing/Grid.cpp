@@ -32,9 +32,13 @@ void Grid::setupGrid()
     for (int i = 0; i < 155; i++)
     {
         findNeighbours(m_grid,i );
+
     }
    
+    bfs(START_POINT,END_POINT, m_grid);
     int i = 0;
+
+
 }
 
 void Grid::render(sf::RenderWindow& t_window)
@@ -82,3 +86,34 @@ Grid::Grid()
 	return 10;
 
 }
+
+ void Grid::bfs(const static int START_POINT, const static int END_POINT, std::vector<Cell>& t_grid)
+ {
+   //  Cell currentNode = m_grid.at(START_POINT);
+     //set the color of the start point and end point
+     t_grid.at(START_POINT).m_rect.setFillColor(sf::Color::Blue);
+     t_grid.at(END_POINT).m_rect.setFillColor(sf::Color::White);
+
+     // Here we put the node of the grid into the queue 
+     nodeQueue.emplace(m_grid.at(START_POINT));
+
+     while (!m_endPoint)
+     {
+
+         if (nodeQueue.front().getVisited() == true)
+         {
+             
+            // nodeQueue.emplace(m_grid.at(0).neighboursIDS.at(0));
+             // Here 
+             nodeQueue.front().setVisited();
+
+             nodeQueue.pop();
+            // m_endPoint = true;
+         }
+
+     }
+
+   
+
+     int i = 0;
+ }

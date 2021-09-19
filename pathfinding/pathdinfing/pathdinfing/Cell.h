@@ -2,8 +2,7 @@
 #include "SFML/Graphics.hpp"
 class Cell
 {
-	
-	
+
 public:
 	Cell();
 	void setupCell();
@@ -16,5 +15,12 @@ public:
 	int id = 0;
 	std::vector<int > neighboursIDS;
 	void addNeighbour(int t_ID);
+
+	void setVisited();
+	bool getVisited();
+private:
+
+	bool m_visited = false;
+
 };
 
